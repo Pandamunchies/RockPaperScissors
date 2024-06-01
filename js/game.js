@@ -25,3 +25,24 @@ function getPick(){
 }
 let userPick=getPick()
 console.log(userPick);
+if(computerPick==="Rock" && userPick==="Scissor"){
+    console.log("You lose! Rock breaks scissors!");
+}
+else if(computerPick==="Scissors" && userPick==="Rock"){
+    console.log("You Win! Rock breaks scissors!");
+}
+else if(computerPick==="Paper" && userPick==="Rock"){
+    console.log("You lose! Paper covers Rock!");
+}
+else if(computerPick==="Rock" && userPick==="Paper"){
+    console.log("You Win! Paper covers Rock!");
+}
+else if(computerPick==="Scissor" && userPick==="Paper"){
+    console.log("You lose! Scissor cuts Paper!");
+}
+else if(computerPick==="Paper" && userPick==="Scissor"){
+    console.log("You Win! Scissor cuts Paper!");
+}
+else{
+    console.log("You tied. You both picked "+userPick+"." )
+}
