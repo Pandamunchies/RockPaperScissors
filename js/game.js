@@ -6,13 +6,22 @@ let randomNumber = getRandomInt();
 let computerPick= convertPick(randomNumber)
 function convertPick(number){
     if(number===1){
-    return "rock";
+    return "Rock";
     }
     else if(number===2){
-    return "paper";
+    return "Paper";
     }
     else if(randomNumber===3){
-    return  "scissor";
+    return  "Scissor";
     }
 }
 console.log(computerPick);
+function getPick(){
+    let pick="";
+    while(pick!="Rock" && pick!="Paper" && pick!="Scissor"){
+    pick=prompt("Please pick Rock, Paper or Scissor");
+    }
+    return pick;
+}
+let userPick=getPick()
+console.log(userPick);
