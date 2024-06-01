@@ -4,6 +4,7 @@ function getRandomInt() {
 }
 let randomNumber = getRandomInt(); 
     console.log(randomNumber); 
+    randomNumber=3;
 let computerPick= convertPick(randomNumber)
 function convertPick(number){
     if(number===1){
@@ -29,7 +30,7 @@ console.log(userPick);
 if(computerPick==="Rock" && userPick==="Scissor"){
     console.log("You lose! Rock breaks scissors!");
 }
-else if(computerPick==="Scissors" && userPick==="Rock"){
+else if(computerPick==="Scissor" && userPick==="Rock"){
     console.log("You Win! Rock breaks scissors!");
 }
 else if(computerPick==="Paper" && userPick==="Rock"){
