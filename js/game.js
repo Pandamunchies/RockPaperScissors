@@ -1,3 +1,4 @@
+do{
 function getRandomInt() {
     return Math.floor(Math.random()*3+1);
 }
@@ -46,3 +47,10 @@ else if(computerPick==="Paper" && userPick==="Scissor"){
 else{
     console.log("You tied. You both picked "+userPick+"." )
 }
+function playAgain(){
+    let choice="";
+    choice=prompt("Would you like to play again?");
+    return choice;
+}
+
+}while(playAgain()==="Yes");
