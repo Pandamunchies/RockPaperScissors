@@ -6,19 +6,16 @@ function getComputerPick(){
     let number=Math.floor(Math.random()*3+1);
     switch(number){
         case 1:
-            console.log("Rock");
+            return "Rock";
             break;
         case 2:
-            console.log("Paper");
+            return "Paper";
             break;
         case 3:
-            console.log("scissor");
+            return "Scissor";
             break;
     }   
 }
-
-let computerPick= getComputerPick()
-console.log(computerPick);
 function getPick(){
     let pick="";
     while(pick!="Rock" && pick!="Paper" && pick!="Scissor"){
@@ -26,12 +23,17 @@ function getPick(){
     }
     return pick;
 }
+let computerPick= getComputerPick()
+console.log(computerPick);
+
 let userPick=getPick()
 console.log(userPick);
-if(computerPick==="Rock" && userPick==="Scissor"){
-    console.log("You lose! Rock breaks scissors!");
-    computerScore++;
-}
+getWinner(computerPick, userPick)
+function getWinner(computerPick, userPick){
+    if(computerPick==="Rock" && userPick==="Scissor"){
+        console.log("You lose! Rock breaks scissors!");
+        computerScore++;
+    }
 else if(computerPick==="Scissor" && userPick==="Rock"){
     console.log("You Win! Rock breaks scissors!");
     userScore++;
@@ -55,11 +57,7 @@ else if(computerPick==="Paper" && userPick==="Scissor"){
 else{
     console.log("You tied. You both picked "+userPick+"." )
 }
-/*function playAgain(){
-    let choice="";
-    choice=prompt("Would you like to play again?");
-    return choice;
-}*/
+}
 //count++;
 /*scoreBoard(userScore,computerScore,count)
 function scoreBoard(user, computer,count){
