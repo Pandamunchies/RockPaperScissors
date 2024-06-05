@@ -1,25 +1,23 @@
 let count=0;
 let userScore=0;
 let computerScore=0;
-do{
-function getRandomInt() {
-    return Math.floor(Math.random()*3+1);
+//do{
+function getComputerPick(){
+    let number=Math.floor(Math.random()*3+1);
+    switch(number){
+        case 1:
+            console.log("Rock");
+            break;
+        case 2:
+            console.log("Paper");
+            break;
+        case 3:
+            console.log("scissor");
+            break;
+    }   
 }
-let randomNumber = getRandomInt(); 
-    console.log(randomNumber); 
-    randomNumber=3;
-let computerPick= convertPick(randomNumber)
-function convertPick(number){
-    if(number===1){
-    return "Rock";
-    }
-    else if(number===2){
-    return "Paper";
-    }
-    else if(randomNumber===3){
-    return  "Scissor";
-    }
-}
+
+let computerPick= getComputerPick()
 console.log(computerPick);
 function getPick(){
     let pick="";
@@ -62,8 +60,8 @@ else{
     choice=prompt("Would you like to play again?");
     return choice;
 }*/
-count++;
-scoreBoard(userScore,computerScore,count)
+//count++;
+/*scoreBoard(userScore,computerScore,count)
 function scoreBoard(user, computer,count){
     if(count<5){
         console.log("Your score is: "+user+
@@ -84,4 +82,4 @@ function scoreBoard(user, computer,count){
     }
 }
 
-}while(count<5);
+}while(count<5);*/
