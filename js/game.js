@@ -1,25 +1,28 @@
 let count=0;
 let userScore=0;
 let computerScore=0;
+let computerPick="";
 
 function getComputerPick(){
     let number=Math.floor(Math.random()*3+1);
+    console.log(number);
     switch(number){
         case 1:
-            return "Rock";
+            computerPick= "Rock";
             break;
         case 2:
-            return "Paper";
+            computerPick= "Paper";
             break;
         case 3:
-            return "Scissor";
+            computerPick="Scissor";
             break;
-    }   
+    }
+     return computerPick   
 }
 function getPick(){
     let pick="";
     while(pick!="Rock" && pick!="Paper" && pick!="Scissor"){
-    pick=prompt("Please pick Rock, Paper or Scissor");
+        pick=prompt("Please pick Rock, Paper or Scissor");
     }
     return pick;
 }
@@ -69,17 +72,19 @@ function scoreBoard(user, computer,count){
             "\nComputer score is: "+computer+
             "\nI am sorry. You have lost this game of wits.");
         }
+        
     }
 }
 function playRound(){
-    let computerPick= getComputerPick()
+    computerPick= getComputerPick()
     console.log(computerPick);
     let userPick=getPick()
     console.log(userPick);
-    getWinner(computerPick, userPick)
+    //getWinner(computerPick, userPick)
     count++;
-    scoreBoard(userScore,computerScore,count)
+    //scoreBoard(userScore,computerScore,count)
 }
+
 while(count<5){
     playRound()
 }
