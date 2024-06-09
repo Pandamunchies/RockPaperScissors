@@ -27,6 +27,8 @@ function getPick(){
     ){
         pick=prompt("Please pick Rock, Paper or Scissor");
     }
+    pick=pick.toLowerCase();
+    pick=pick.charAt(0).toUpperCase() + pick.slice(1);
     return pick;
 }
 function getWinner(computerPick, userPick){
