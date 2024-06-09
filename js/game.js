@@ -70,14 +70,18 @@ function scoreBoard(user, computer,count){
         if(user-computer>0){
             console.log("Your score is: "+user+
             "\nComputer score is: "+computer+
-            "\nCongrats you have won the dual.");
+            "\nCongrats! You have won the dual!");
         }
-        else{
+        else if(user-computer<0){
             console.log("Your score is: "+user+
             "\nComputer score is: "+computer+
             "\nI am sorry. You have lost this game of wits.");
         }
-        
+        else{
+            console.log("Your score is: "+user+
+            "\nComputer score is: "+computer+
+            "\nYou have tied. Try again to settle the score.");    
+        }
     }
 }
 function playRound(){
@@ -85,9 +89,9 @@ function playRound(){
     console.log(computerPick);
     let userPick=getPick()
     console.log(userPick);
-    //getWinner(computerPick, userPick)
+    getWinner(computerPick, userPick)
     count++;
-    //scoreBoard(userScore,computerScore,count)
+    scoreBoard(userScore,computerScore,count)
 }
 
 while(count<5){
