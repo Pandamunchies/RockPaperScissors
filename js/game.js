@@ -1,11 +1,10 @@
 let count=0;
 let userScore=0;
 let computerScore=0;
-let computerPick="";
 
 function getComputerPick(){
     let number=Math.floor(Math.random()*3+1);
-    console.log(number);
+    //console.log(number);
     switch(number){
         case 1:
             computerPick= "Rock";
@@ -85,10 +84,10 @@ function scoreBoard(user, computer,count){
     }
 }
 function playRound(){
-    computerPick= getComputerPick()
-    console.log(computerPick);
+    let computerPick= getComputerPick()
+    //console.log(computerPick);
     let userPick=getPick()
-    console.log(userPick);
+    //console.log(userPick);
     getWinner(computerPick, userPick)
     count++;
     scoreBoard(userScore,computerScore,count)
@@ -97,5 +96,3 @@ function playRound(){
 while(count<5){
     playRound()
 }
-
-
