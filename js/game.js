@@ -20,8 +20,11 @@ function getComputerPick(){
      return computerPick   
 }
 function getPick(){
-    let pick="";
-    while(pick!="Rock" && pick!="Paper" && pick!="Scissor"){
+    let pick="Pick";
+    while(pick.localeCompare("Rock", 'en', {sensitivity: 'base'})!=0
+        && pick.localeCompare("Paper", 'en', {sensitivity: 'base'})!=0
+        && pick.localeCompare("Scissor", 'en', {sensitivity: 'base'})!=0
+    ){
         pick=prompt("Please pick Rock, Paper or Scissor");
     }
     return pick;
